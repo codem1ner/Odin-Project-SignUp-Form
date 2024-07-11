@@ -42,10 +42,22 @@ form {
   display: flex;
   flex-direction: row; /* Adjust as needed, assuming it's row for this example */
   flex-wrap: wrap; /* If you want multiple fields in a row on wider screens */
+  
 }
 
 .info-items {
   display: flex;
   flex-direction: column; /* This makes the label stack above the input */
   margin: 8px; /* Adjust spacing as needed */
+}
+
+label {
+  font-size:xx-small;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Target the first input in each .info-items div */
+.info-items input:nth-of-type(1) {
+  margin-bottom: 20px; /* Adjust the value as needed for spacing */
 }
