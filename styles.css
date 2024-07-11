@@ -10,7 +10,7 @@ body {
 }
 
 .image-section {
-  flex: 4; /* Allow section to grow and fill available space equally */
+  flex: 1; /* Allow section to grow and fill available space equally */
   border-right: 2px solid black; /* Add a right border to separate the image section from content */
 }
 
@@ -20,7 +20,7 @@ body {
 }
 
 .form-section {
-  flex: 6;
+  flex: 1;
   padding: 20px;
 }
 
