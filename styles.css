@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 /* Removes tiny amount of unwanted vertical scroll */
 body {
+  font-family: 'Lato', sans-serif;
   margin: 0; /* Eliminate the default margin to ensure the layout uses the full viewport */
   overflow: hidden; /* Hide overflow to prevent any scrolling due to excess content or padding */
 }
@@ -22,7 +24,7 @@ body {
 .form-section {
   flex: 1;
   padding: 20px;
-  background-color:rgb(218, 218, 110)
+  background-color:rgb(218, 218, 110);
 }
 
 form {
@@ -70,7 +72,7 @@ label {
   height: 100vh; /* Example height to ensure the container is tall enough to show vertical centering */
 }
 
-/* Increased size of submit button */
+/* Change size of submit button */
 input[type="submit"] {
   padding: 10px 20px; /* Increase padding to make the button taller and wider */
   font-size: 16px; /* Increase font size for larger text */
@@ -78,15 +80,34 @@ input[type="submit"] {
   height: 50px; /* Specify a height, or leave it out to size automatically based on content and padding */
   cursor: pointer; /* Changes the cursor to a pointer to indicate it's clickable */
   border: none; /* Optional: removes the border */
-  background-color: #09872d; /* Optional: sets a background color */
+  background-color: #077125; /* Optional: sets a background color */
   color: white; /* Optional: sets the text color */
   border-radius: 5px; /* Optional: rounds the corners of the button */
 }
 
-/* Changes input field background color */
+/* Input field background color */
 input {
   background-color: rgb(218, 218, 86); /* Adjust to your preferred background color */
 }
 
-
+/* Placeholder text color and font size with compatibility additions */
+input::placeholder {
+  color: #b11313; /* Placeholder text color */
+  font-size: 12px; /* Adjust the font size as needed */
+}
+/* For cross-browser compatibility */
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #b11313;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #b11313;
+  opacity: 1; /* Firefox requires this to correctly display the color */
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #b11313;
+  opacity: 1; /* Firefox requires this to correctly display the color */
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #b11313;
+}
 
