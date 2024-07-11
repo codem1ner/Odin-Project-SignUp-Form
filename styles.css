@@ -68,3 +68,16 @@ label {
   align-items: center;
   height: 100vh; /* Example height to ensure the container is tall enough to show vertical centering */
 }
+
+/* Increased size of submit button */
+input[type="submit"] {
+  padding: 10px 20px; /* Increase padding to make the button taller and wider */
+  font-size: 16px; /* Increase font size for larger text */
+  width: 120px; /* Specify a width, or use auto for automatic sizing based on content and padding */
+  height: 50px; /* Specify a height, or leave it out to size automatically based on content and padding */
+  cursor: pointer; /* Changes the cursor to a pointer to indicate it's clickable */
+  border: none; /* Optional: removes the border */
+  background-color: #09872d; /* Optional: sets a background color */
+  color: white; /* Optional: sets the text color */
+  border-radius: 5px; /* Optional: rounds the corners of the button */
+}
