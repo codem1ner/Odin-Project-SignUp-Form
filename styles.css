@@ -42,7 +42,6 @@ form {
   display: flex;
   flex-direction: row; /* Adjust as needed, assuming it's row for this example */
   flex-wrap: wrap; /* If you want multiple fields in a row on wider screens */
-  
 }
 
 .info-items {
@@ -60,4 +59,12 @@ label {
 /* Target the first input in each .info-items div */
 .info-items input:nth-of-type(1) {
   margin-bottom: 20px; /* Adjust the value as needed for spacing */
+}
+
+/* Moved position of submit button to centre of form */
+.form-part-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Example height to ensure the container is tall enough to show vertical centering */
 }
