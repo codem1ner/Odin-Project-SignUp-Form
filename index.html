@@ -13,6 +13,8 @@
   <div class="main-container">
     <div class="image-section">
       <img src="unsplash.jpg" alt="form-art">
+      <!-- Photo by <a href="https://unsplash.com/@donricardo?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Don Ricardo</a> on <a href="https://unsplash.com/photos/a-close-up-of-a-leaf-8-KTJLDkxuk?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+  -->
     </div>
 
     <div class="form-section">
@@ -24,11 +26,40 @@
         </div>
 
         <div class="form-part-middle">
-          Form Content
+          <fieldset>
+            <legend>Personal Information</legend>
+
+            <div class="info-group">
+              <div class="info-items">
+                <label for="name">Name</label>
+                <input type="text" name="First Name:" id="firstname" placeholder="Forename" required>
+
+                <label for="surname">Surname</label>
+                <input type="text" name="Last Name:" id="surname" placeholder="Surname" required>
+              </div>
+              <div class="info-items">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="Email" required>
+
+                <label for="phone">Phone Number</label>
+                <input type="tel" name="phone" id="phone" placeholder="Phone Number" required>
+              </div>
+
+              <div class="info-items">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" placeholder="Password" required>
+
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" name="confirm-password" id="confirm-password" placeholder="Confirm Password"
+                  required>
+              </div>
+            </div>
+
+          </fieldset>
         </div>
 
         <div class="form-part-bottom">
-          Form Submit Button and Login
+          <input type="submit" value="Sign Up">
         </div>
 
       </form>

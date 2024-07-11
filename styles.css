@@ -10,7 +10,7 @@ body {
 }
 
 .image-section {
-  flex: 1; /* Allow section to grow and fill available space equally */
+  flex: 4; /* Allow section to grow and fill available space equally */
   border-right: 2px solid black; /* Add a right border to separate the image section from content */
 }
 
@@ -20,7 +20,7 @@ body {
 }
 
 .form-section {
-  flex: 1;
+  flex: 6;
   padding: 20px;
 }
 
@@ -36,4 +36,16 @@ form {
 .form-part-middle,
 .form-part-bottom {
   flex: 1;
+}
+
+.info-group {
+  display: flex;
+  flex-direction: row; /* Adjust as needed, assuming it's row for this example */
+  flex-wrap: wrap; /* If you want multiple fields in a row on wider screens */
+}
+
+.info-items {
+  display: flex;
+  flex-direction: column; /* This makes the label stack above the input */
+  margin: 8px; /* Adjust spacing as needed */
 }
