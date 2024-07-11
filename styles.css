@@ -1,0 +1,39 @@
+
+/* Removes tiny amount of unwanted vertical scroll */ 
+body {
+  margin: 0; /* Eliminate the default margin to ensure the layout uses the full viewport */
+  overflow: hidden; /* Hide overflow to prevent any scrolling due to excess content or padding */
+}
+
+.main-container {
+  display: flex; 
+  height: 100vh; /* Make container fill full viewport height */
+}
+
+.image-section {
+  flex: 1; /* Allow section to grow and fill available space equally */
+  border-right: 1px solid black; /* Add a right border to separate the image section from content */
+}
+
+.image-section img {
+  width: 100%; /* Make image fill container */
+  height: 100%; /* Make image fill container */ 
+}
+
+.form-section {
+  flex: 1;
+  padding: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  height: 100%; 
+  /* Divides the form into three horizontally stretched sections that each take
+  up equal portions of the form's height. */
+}
+
+.form-part-top, .form-part-middle, .form-part-bottom {
+  flex: 1;
+}
+
