@@ -111,3 +111,8 @@ input::placeholder {
   color: #b11313;
 }
 
+/* Changes outline color of focussed input field */
+input:focus {
+  outline: 1px solid blue;
+}
+
