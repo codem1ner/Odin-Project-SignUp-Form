@@ -1,8 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
 
+/* CSS Variables */
+:root {
+  --main-font: "Lato", sans-serif;
+  --primary-color: rgb(218, 218, 110);
+  --secondary-color: rgb(218, 218, 86);
+  --accent-color: #077125;
+  --text-color: #000;
+  --border-color: #000;
+  --focus-color: blue;
+  --placeholder-color: #b11313;
+}
+
 /* Global styles */
 body {
-  font-family: "Lato", sans-serif;
+  font-family: var(--main-font);
   margin: 0;
   overflow: hidden;
 }
@@ -16,9 +28,8 @@ body {
 /* Image Section */
 .image-section {
   flex: 1;
-  border-right: 2px solid black;
+  border-right: 2px solid var(--border-color);
 }
-
 
 .image-section img {
   width: 100%;
@@ -52,7 +63,7 @@ body {
 .form-section {
   flex: 1;
   padding: 20px;
-  background-color: rgb(218, 218, 110);
+  background-color: var(--primary-color);
 }
 
 form {
@@ -68,7 +79,6 @@ form {
   flex: 1;
 }
 
-/* Course Header */
 .form-part-top {
   display: flex;
   flex-direction: column;
@@ -76,7 +86,7 @@ form {
   justify-content: center;
   margin-left: 20%;
   margin-right: 20%;
-  font-size: x-large;/* No specific styles */
+  font-size: x-large;
 }
 
 /* User Information Fields */
@@ -91,7 +101,7 @@ form {
 }
 
 fieldset {
-  border: 3px solid #000000; /* Adjust the color and thickness as needed */
+  border: 3px solid var(--border-color);
 }
 
 .info-items {
@@ -108,11 +118,11 @@ label {
 }
 
 input {
-  background-color: rgb(218, 218, 86);
+  background-color: var(--secondary-color);
 }
 
 input:focus {
-  outline: 1px solid blue;
+  outline: 1px solid var(--focus-color);
 }
 
 input[type="submit"] {
@@ -122,7 +132,7 @@ input[type="submit"] {
   height: 50px;
   cursor: pointer;
   border: none;
-  background-color: #077125;
+  background-color: var(--accent-color);
   color: white;
   border-radius: 5px;
 }
@@ -139,9 +149,9 @@ input[type="submit"] {
 :-moz-placeholder,
 ::-moz-placeholder,
 :-ms-input-placeholder {
-  color: #b11313;
-  font-size: 1.05em; /* For consistency across different styles */
-  opacity: 1; /* Specifically for Firefox placeholder */
+  color: var(--placeholder-color);
+  font-size: 1.05em;
+  opacity: 1;
 }
 
 .form-part-middle legend {
@@ -161,3 +171,20 @@ input[type="submit"] {
   height: 100vh;
 }
 
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+  }
+
+  .image-section,
+  .form-section {
+    flex: unset;
+    height: 50vh;
+  }
+
+  .form-part-top {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
