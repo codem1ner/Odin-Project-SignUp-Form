@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
 /* Removes tiny amount of unwanted vertical scroll */
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   margin: 0; /* Eliminate the default margin to ensure the layout uses the full viewport */
   overflow: hidden; /* Hide overflow to prevent any scrolling due to excess content or padding */
 }
@@ -24,7 +24,7 @@ body {
 .form-section {
   flex: 1;
   padding: 20px;
-  background-color:rgb(218, 218, 110);
+  background-color: rgb(218, 218, 110);
 }
 
 form {
@@ -54,7 +54,7 @@ form {
 }
 
 label {
-  font-size:xx-small;
+  font-size: xx-small;
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -87,7 +87,11 @@ input[type="submit"] {
 
 /* Input field background color */
 input {
-  background-color: rgb(218, 218, 86); /* Adjust to your preferred background color */
+  background-color: rgb(
+    218,
+    218,
+    86
+  ); /* Adjust to your preferred background color */
 }
 
 /* Placeholder text color and font size with compatibility additions */
@@ -96,18 +100,22 @@ input::placeholder {
   font-size: 12px; /* Adjust the font size as needed */
 }
 /* For cross-browser compatibility */
-::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
   color: #b11313;
 }
-:-moz-placeholder { /* Firefox 18- */
-  color: #b11313;
-  opacity: 1; /* Firefox requires this to correctly display the color */
-}
-::-moz-placeholder { /* Firefox 19+ */
+:-moz-placeholder {
+  /* Firefox 18- */
   color: #b11313;
   opacity: 1; /* Firefox requires this to correctly display the color */
 }
-:-ms-input-placeholder { /* IE 10+ */
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #b11313;
+  opacity: 1; /* Firefox requires this to correctly display the color */
+}
+:-ms-input-placeholder {
+  /* IE 10+ */
   color: #b11313;
 }
 
@@ -116,3 +124,28 @@ input:focus {
   outline: 1px solid blue;
 }
 
+/* Container for image and caption, fills parent */
+.fig-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* Image fills .fig-container */
+.fig-container img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Caption at bottom, overlays image */
+.fig-container figcaption {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 10px;
+}
