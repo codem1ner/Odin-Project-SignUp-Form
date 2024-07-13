@@ -1,26 +1,53 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
-/* Removes tiny amount of unwanted vertical scroll */
+
+/* Global styles */
 body {
   font-family: "Lato", sans-serif;
-  margin: 0; /* Eliminate the default margin to ensure the layout uses the full viewport */
-  overflow: hidden; /* Hide overflow to prevent any scrolling due to excess content or padding */
+  margin: 0;
+  overflow: hidden;
 }
 
+/* Layout Containers */
 .main-container {
   display: flex;
-  height: 100vh; /* Make container fill full viewport height */
+  height: 100vh;
 }
 
+/* Image Section */
 .image-section {
-  flex: 1; /* Allow section to grow and fill available space equally */
-  border-right: 2px solid black; /* Add a right border to separate the image section from content */
+  flex: 1;
+  border-right: 2px solid black;
 }
 
 .image-section img {
-  width: 100%; /* Make image fill container */
-  height: 100%; /* Make image fill container */
+  width: 100%;
+  height: 100%;
 }
 
+.fig-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.fig-container img {
+  width: 100%;
+  height: 100%;
+}
+
+.fig-container figcaption {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 10px;
+}
+
+/* Form Section */
 .form-section {
   flex: 1;
   padding: 20px;
@@ -31,121 +58,94 @@ form {
   display: flex;
   flex-direction: column;
   height: 100%;
-  /* Divides the form into three horizontally stretched sections that each take
-  up equal portions of the form's height. */
 }
 
+/* Form Layout and Structure */
 .form-part-top,
 .form-part-middle,
 .form-part-bottom {
   flex: 1;
 }
 
+/* Course Header */
+.form-part-top {
+  /* No specific styles */
+}
+
+/* User Information Fields */
+.form-part-middle {
+  /* No specific styles */
+}
+
 .info-group {
   display: flex;
-  flex-direction: row; /* Adjust as needed, assuming it's row for this example */
-  flex-wrap: wrap; /* If you want multiple fields in a row on wider screens */
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .info-items {
   display: flex;
-  flex-direction: column; /* This makes the label stack above the input */
-  margin: 8px; /* Adjust spacing as needed */
+  flex-direction: column;
+  margin: 8px;
 }
 
+/* General Element Styles */
 label {
   font-size: xx-small;
   font-weight: bold;
   text-transform: uppercase;
 }
 
-/* Target the first input in each .info-items div */
-.info-items input:nth-of-type(1) {
-  margin-bottom: 20px; /* Adjust the value as needed for spacing */
-}
-
-/* Moved position of submit button to centre of form */
-.form-part-bottom {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; /* Example height to ensure the container is tall enough to show vertical centering */
-}
-
-/* Change size of submit button */
-input[type="submit"] {
-  padding: 10px 20px; /* Increase padding to make the button taller and wider */
-  font-size: 16px; /* Increase font size for larger text */
-  width: 120px; /* Specify a width, or use auto for automatic sizing based on content and padding */
-  height: 50px; /* Specify a height, or leave it out to size automatically based on content and padding */
-  cursor: pointer; /* Changes the cursor to a pointer to indicate it's clickable */
-  border: none; /* Optional: removes the border */
-  background-color: #077125; /* Optional: sets a background color */
-  color: white; /* Optional: sets the text color */
-  border-radius: 5px; /* Optional: rounds the corners of the button */
-}
-
-/* Input field background color */
 input {
-  background-color: rgb(
-    218,
-    218,
-    86
-  ); /* Adjust to your preferred background color */
+  background-color: rgb(218, 218, 86);
 }
 
-/* Placeholder text color and font size with compatibility additions */
-input::placeholder {
-  color: #b11313; /* Placeholder text color */
-  font-size: 12px; /* Adjust the font size as needed */
-}
-/* For cross-browser compatibility */
-::-webkit-input-placeholder {
-  /* Chrome/Opera/Safari */
-  color: #b11313;
-}
-:-moz-placeholder {
-  /* Firefox 18- */
-  color: #b11313;
-  opacity: 1; /* Firefox requires this to correctly display the color */
-}
-::-moz-placeholder {
-  /* Firefox 19+ */
-  color: #b11313;
-  opacity: 1; /* Firefox requires this to correctly display the color */
-}
-:-ms-input-placeholder {
-  /* IE 10+ */
-  color: #b11313;
-}
-
-/* Changes outline color of focussed input field */
 input:focus {
   outline: 1px solid blue;
 }
 
-/* Container for image and caption, fills parent */
-.fig-container {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
+input[type="submit"] {
+  padding: 10px 20px;
+  font-size: 16px;
+  width: 120px;
+  height: 50px;
+  cursor: pointer;
+  border: none;
+  background-color: #077125;
+  color: white;
+  border-radius: 5px;
 }
 
-/* Image fills .fig-container */
-.fig-container img {
-  width: 100%;
-  height: 100%;
+/* Sections: Increase Font Size */
+.form-part-middle input,
+.form-part-middle label {
+  font-size: 1.05em;
+  text-transform: capitalize;
 }
 
-/* Caption at bottom, overlays image */
-.fig-container figcaption {
-  position: absolute;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  color: #f1f1f1;
-  width: 100%;
-  padding: 10px;
+.form-part-middle input::placeholder,
+::-webkit-input-placeholder,
+:-moz-placeholder,
+::-moz-placeholder,
+:-ms-input-placeholder {
+  color: #b11313;
+  font-size: 1.05em; /* For consistency across different styles */
+  opacity: 1; /* Specifically for Firefox placeholder */
+}
+
+.form-part-middle legend {
+  font-size: 2em;
+}
+
+.info-items input:nth-of-type(1) {
+  margin-bottom: 20px;
+}
+
+/* Form Submission Section */
+.form-part-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
